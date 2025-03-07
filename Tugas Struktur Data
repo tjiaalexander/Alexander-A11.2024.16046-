@@ -1,0 +1,47 @@
+//judul mencari luas HP
+//minggu 2 maret 2025
+//memodifikasi objek dengan class
+//programer: alexander
+
+#include<iostream>
+using namespace std;
+
+class hape{
+private:
+    //atribut
+    double panjang, lebar;
+
+public:
+    //konstruktor
+    hape(double p, double l):panjang(p), lebar(l){
+        cout<<"Handphone dibuat dengan panjang "<<panjang<<" dan lebar "<<lebar<<"\n";
+    }
+
+    double hitungLuas(){
+        return panjang*lebar;
+    }
+
+    ~hape(){
+        cout<<"Handphone dengan luas "<<hitungLuas()<<" dihapus.\n";
+    }
+};
+
+void tampilkanInpo(){
+    double p, l;
+    cout<<"Panjang Handphone: ";cin>>p;
+    cout<<"Lebar Handphone: ";cin>>l;
+
+    cout<<"\n";
+
+    hape hp(p, l);
+    cout<<"Luas Handphone adalah "<<hp.hitungLuas()<<endl;
+}
+
+int main(){
+    tampilkanInpo();
+    return 0;
+}
+
+
+
+
